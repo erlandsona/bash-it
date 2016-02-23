@@ -1,34 +1,39 @@
 cite about-alias
 about-alias 'general aliases'
 
-# List directory contents
-alias sl=ls
-alias ls='ls -G'        # Compact view, show colors
-alias la='ls -AF'       # Compact view, show hidden
-alias ll='ls -al'
-alias l='ls -a'
-alias l1='ls -1'
+
+################################
+### Default Bash Aliases
+################################
+
+# # List directory contents
+# alias sl=ls
+# alias ls='ls -G'        # Compact view, show colors
+# alias la='ls -AF'       # Compact view, show hidden
+# alias ll='ls -al'
+# alias l='ls -a'
+# alias l1='ls -1'
 
 alias _="sudo"
 
-if [ $(uname) = "Linux" ]
-then
-  alias ls="ls --color=auto"
-fi
-which gshuf &> /dev/null
-if [ $? -eq 0 ]
-then
-  alias shuf=gshuf
-fi
+# if [ $(uname) = "Linux" ]
+# then
+#   alias ls="ls --color=auto"
+# fi
+# which gshuf &> /dev/null
+# if [ $? -eq 0 ]
+# then
+#   alias shuf=gshuf
+# fi
 
-alias c='clear'
-alias k='clear'
-alias cls='clear'
+# alias c='clear'
+# alias k='clear'
+# alias cls='clear'
 
 alias edit="$EDITOR"
 alias pager="$PAGER"
 
-alias q='exit'
+# alias q='exit'
 
 alias irc="$IRC_CLIENT"
 
@@ -47,7 +52,7 @@ alias ....='cd ../../..' # Go up three directories
 alias -- -='cd -'        # Go back
 
 # Shell History
-alias h='history'
+alias his='history'
 
 # Tree
 if [ ! -x "$(which tree 2>/dev/null)" ]
@@ -56,8 +61,8 @@ then
 fi
 
 # Directory
-alias md='mkdir -p'
-alias rd='rmdir'
+# alias md='mkdir -p'
+# alias rd='rmdir'
 
 # Display whatever file is regular file or folder
 catt() {
